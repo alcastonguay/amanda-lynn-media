@@ -1,5 +1,5 @@
-const React = require("react")
-const gatsby = jest.requireActual("gatsby")
+const React = require("react");
+const gatsby = jest.requireActual("gatsby");
 
 module.exports = {
   ...gatsby,
@@ -19,15 +19,14 @@ module.exports = {
     }) =>
       React.createElement("a", {
         ...rest,
-        href: to,
+        href: to
       })
   ),
-  Slice: jest.fn().mockImplementation(
-    ({ alias, ...rest }) =>
-      React.createElement("div", {
-        ...rest,
-        "data-test-slice-alias": alias
-      })
+  Slice: jest.fn().mockImplementation(({ alias, ...rest }) =>
+    React.createElement("div", {
+      ...rest,
+      "data-test-slice-alias": alias
+    })
   ),
-  useStaticQuery: jest.fn(),
-}
+  useStaticQuery: jest.fn()
+};

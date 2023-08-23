@@ -11,8 +11,9 @@ module.exports = {
   siteMetadata: {
     title: `Amanda Lynn Media`,
     description: `Portfolio website for Amanda Lynn's multimedia projects.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://amandalynn.media/`,
+    image: `/images/og-image.png`,
+    author: `amandalynn.maker@gmail.com`
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -20,8 +21,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -36,8 +37,8 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
-  ],
-}
+        icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
+      }
+    }
+  ]
+};
