@@ -4,4 +4,9 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/
  */
 
-// You can delete this file if you're not using it
+// import Bootstrap
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
+// import global styles for page
+import "./src/styles/colors.css";

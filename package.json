@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Amanda Lynn <amandalynn.maker@gmail.com",
   "dependencies": {
+    "bootstrap": "^5.3.1",
     "gatsby": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.11.0",
