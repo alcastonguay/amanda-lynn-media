@@ -9,8 +9,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Amanda Lynn Media`,
-    description: `Portfolio website for Amanda Lynn's multimedia projects.`,
+    title: `Amanda Lynn Media - Software System Development and Multimedia Design`,
+    description: `Amanda Lynn Media combines agile software system development practices with 
+      multimedia design principles to create engaging interactive solutions that leverage existing 
+      technology and human centered design.`,
     siteUrl: `https://amandalynn.media/`,
     image: `/images/og-image.png`,
     author: `amandalynn.maker@gmail.com`

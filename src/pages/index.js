@@ -1,80 +1,98 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo/seo.js";
-import * as styles from "../components/index.module.css";
+import "./index.css";
 
 function IndexPage() {
+  // Image info:
+  // const carouselImages = [{src: "../images/home-head/1.jpg", alt: "Tabletop touchscreen displaying map visualization."},
+  // {src: "../images/home-head/2.png", alt: "Newly renovated living room featuring darkwood flooring, gray walls, and a chocolate brown banister."},
+  // {src: "../images/home-head/3.png", alt: "A color wheel of ice cubes melting on a granite surface."},
+  // {src: "../images/home-head/4.jpg", alt: "Amanda Lynn climbing a roof while painting a white house."},
+  // {src: "../images/home-head/5.png", alt: "Color pencile and india ink multimedia drawing of a sunset reflecting on a lake in the forest."},
+  // {src: "../images/home-head/6.png", alt: "A small house on a brick sidewalk, with a tree in a sidewalk plot surrounded by flowers."}];
+
+  let carouselItems = [
+    <div className="carousel-item  h-100" key="carousel-1">
+      <img
+        src="/images/home-head/1.jpg"
+        alt="Tabletop touchscreen displaying map visualization."
+        className="img-fluid"
+      />
+    </div>,
+    <div className="carousel-item  h-100" key="carousel-2">
+      <img
+        src="/images/home-head/2.png"
+        alt="Newly renovated living room featuring darkwood flooring, gray walls, and a chocolate brown banister."
+        className="img-fluid"      />
+    </div>,
+    <div className="carousel-item  h-100" key="carousel-3">
+      <img
+        src="../images/home-head/3.png"
+        alt="A color wheel of ice cubes melting on a granite surface."
+        className="img-fluid"
+      />
+    </div>,
+    <div className="carousel-item h-100" key="carousel-4">
+      <img
+        src="../images/home-head/4.jpg"
+        alt="Amanda Lynn climbing a roof while painting a white house."
+        className="img-fluid"
+      />
+    </div>,
+    <div className="carousel-item  h-100" key="carousel-5">
+      <img
+        src="../images/home-head/5.jpg"
+        alt="Color pencile and india ink multimedia drawing of a sunset reflecting on a lake in the forest."
+        className="img-fluid"
+      />
+    </div>,
+    <div className="carousel-item active h-100" key="carousel-6">
+      <div className="h-100 d-inline-block">
+      <img
+        src="../images/home-head/6.png"
+        alt="A small house on a brick sidewalk, with a tree in a sidewalk plot surrounded by flowers."
+        className="img-fluid mx-auto"
+      />
+      </div>
+    </div>
+  ];
+
   return (
     <Layout>
-      <div id="carouselExample" className="carousel slide">
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <StaticImage
-              src="..\images\home-head\1.jpg"
-              className="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div className="carousel-item">
-            <StaticImage
-              src="..\images\home-head\3.png"
-              className="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div className="carousel-item">
-            <StaticImage
-              src="..\images\home-head\4.jpg"
-              className="d-block w-100"
-              alt="..."
-            />
-          </div>
+        <div id="carouselExample" className="carousel slide vh-100">
+          <div className="carousel-inner h-100 text-center">{carouselItems}</div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
-      <div className={styles.textCenter}>
-        <StaticImage
-          src="../images/example.png"
-          loading="eager"
-          width={64}
-          quality={95}
-          formats={["auto", "webp", "avif"]}
-          alt=""
-          style={{ marginBottom: `var(--space-3)` }}
-        />
-        <h1>Amanda Lynn Media</h1>
-        <h2>Multimedia Design & Development</h2>
-        <p className={styles.intro}>
-          <b>Example pages:</b> <br />
-          Edit <code>src/pages/index.js</code> to update this page.
-        </p>
-      </div>
+      <div className="text-center">
+          <h1>Amanda Lynn Media</h1>
+          <h2>Multimedia Design & Development</h2>
+        </div>
     </Layout>
   );
 }
